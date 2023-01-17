@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    padding-top: 10%;
+    font-family: 'Noto Sans Mende Kikakui', sans-serif;
+    letter-spacing: 2px;
+}
+
+.game_board{
+    margin: auto;
+
+    background-image: url(../img/black_jack/blackJack_bg.jpg);
+    background-repeat: no-repeat;
+    /*background-size: inherit;*/
+
+    display: grid;
+
+    height: 500px;
+    width: 930px;
+
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 39% 2% 39% 7% 13%;
+
+    grid-template-areas:
+        "black_jack_msg_d       dealer_board  card_set_area   "
+        "      .                    .              .         "
+        "black_jack_msg_p       player_board   button_area    "
+        "       .               coin_zone           .         "
+        "coin_betting               .           coin_block    ";
+
+    background-size: 930px 500px;
+
+}
+
+.game_board div{
+    position: relative;
+}
+
+.opened_cards{
+    grid-area: opened_cards;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*.opened_cards div{*/
+/*    position: absolute;*/
+/*}*/
+
+.card_set_area{
+    grid-area: card_set_area;
+    display: grid;
+
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas:
+        "   .       .      .   "
+        "   .   card_set   .    "
+        "   .       .      .   ";
+}
+
+.card_set{
+    grid-area: card_set;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: all ease 400ms;
+}
+
+.card_set.active {
+    animation: vibration .1s infinite;
+
+}
+
+@keyframes vibration {
+    from {
+        transform: rotate(1deg);
+    }
+    to {
+        transform: rotate(-1deg);
+    }
+}
+
+/* ----------------------- 딜러 카드판 --------------------------*/
+.dealer_board{
+    grid-area: dealer_board;
+    display: grid;
+
+    grid-template-columns: 22% 19% 19% 19% 21%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        ". d1 d2 d3 d_point"
+        ". d4 d5 d6     .   ";
+
+    /*position: relative;  !**!*/
+    /*transition: .4s;    !**!*/
+    /*transform-style: preserve-3d;   !**!*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.d_point{
+    grid-area: d_point;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 5;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-weight: bold;
+    margin: 10px;
+    line-height: 58px;
+}
+
+.d_card1{
+    grid-area: d1;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.d_card2{
+    grid-area: d2;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.d_card3{
+    grid-area: d3;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.d_card4{
+    grid-area: d4;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.d_card5{
+    grid-area: d5;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.d_card6{
+    grid-area: d6;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* ----------------------- 플레이어 카드판 ---------------------- */
+.player_board{
+    grid-area: player_board;
+    display: grid;
+
+    grid-template-columns: 22% 19% 19% 19% 21%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        ". p1 p2 p3 p_point"
+        ". p4 p5 p6 .";
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.p_point{
+    grid-area: p_point;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 5;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-weight: bold;
+    margin: 10px;
+    line-height: 58px;
+}
+
+.p_card1{
+    grid-area: p1;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.p_card2{
+    grid-area: p2;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.p_card3{
+    grid-area: p3;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.p_card4{
+    grid-area: p4;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.p_card5{
+    grid-area: p5;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.p_card6{
+    grid-area: p6;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* ----------------------------블랙잭 메세지 -----------------------------*/
+.black_jack_msg_p{
+    grid-area: black_jack_msg_p;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.black_jack_msg_d{
+    grid-area: black_jack_msg_d;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    display: grid;
+
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas:
+        "   .       .      .   "
+        "   . opened_cards   .    "
+        "   .       .      .   ";
+
+}
+/* ------------------------배팅할 코인 정하는 파트-------------------------- */
+.coin_betting{
+    grid-area: coin_betting;
+
+    display: grid;
+    grid-template-columns: 28% 28% 28%;
+    grid-template-areas:
+        "coin_minus     wrap   coin_plus";
+}
+
+.coin_minus{
+    grid-area: coin_minus;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.wrap{
+    grid-area: wrap;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 800ms;
+    /*transform: rotateY(180deg);*/
+}
+
+/*.wrap:hover{*/
+/*    transform: rotateY(180deg);*/
+/*}*/
+
+.coin_show{
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 65px;
+    /*background-color: darkred;*/
+
+    position: absolute;
+    z-index: 1;
+    /*transform: rotateY(0deg);*/
+}
+
+/*.coin_back{*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: contain;*/
+
+/*    text-align: center;*/
+/*    justify-content: center;*/
+/*    font-weight: bold;*/
+/*    line-height: 65px;*/
+
+/*    position: absolute;*/
+/*    z-index: 2;*/
+/*    transform: rotateY(0deg);*/
+/*}*/
+
+.coin_plus{
+    grid-area: coin_plus;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: darkred;
+}
+
+/*.betting_board{*/
+/*    grid-area: betting_board;*/
+/*    !*background-color: transparent;*!*/
+/*    !*color: white;*!*/
+/*    !*border: solid 1px whitesmoke;*!*/
+/*    !*border-radius: 10px;*!*/
+/*    !*cursor: pointer;*!*/
+/*}*/
+
+.coin_zone{
+    grid-area: coin_zone;
+
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+    grid-template-areas:
+        "   .   coin_area    .   ";
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+.coin_area{
+    grid-area: coin_area;
+
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas:
+        "get_coin   fixed_coin    .   ";
+
+    background-color: transparent;
+    color: white;
+    border: solid 1px whitesmoke;
+    border-radius: 10px;
+    font-size: 15px;
+    /*letter-spacing: 2px;*/
+
+
+}
+
+.get_coin{
+    grid-area: get_coin;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    justify-content: center;
+    /*font-weight: bold;*/
+    font-size: 10px;
+    line-height: 45px;
+    color: black;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+#get_coin{
+    animation-name: get_coin;
+
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes get_coin {
+    from {top : 50px;}
+    to { bottom : 0px;}
+}
+
+
+.fixed_coin{
+    grid-area: fixed_coin;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    justify-content: center;
+    /*font-weight: bold;*/
+    font-size: 10px;
+    line-height: 45px;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.fixed_coin.active {
+    animation: vibration .1s infinite;
+
+}
+
+.button_area{
+    grid-area: button_area;
+
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "b3     b4"
+        "b1     b2";
+
+    padding: 20px;
+}
+
+.b1{
+    grid-area: b1;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.b2{
+    grid-area: b2;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.b3{
+    grid-area: b3;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.b4{
+    grid-area: b4;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#stand{
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.coin_block{
+    grid-area: coin_block;
+    color : whitesmoke;
+
+    display: grid;
+    grid-template-columns: 31% 69%;
+    grid-template-rows: 38% 49% 13%;
+    grid-template-areas:
+        "   .       .    "
+        "   .   show_user_coin"
+        "   .       .    "
+    ;
+
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&display=swap');
+
+.show_user_coin{
+    grid-area: show_user_coin;
+
+    border: none;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    /*background-color: #393E46;*/
+    background-color: rgba(170, 148, 148, 0.44);
+
+    /*color: #49FF00;*/
+    color : white;
+    font-weight: bold;
+    line-height: 33px;
+    padding-left: 5px;
+    text-align: right;
+    padding-right: 10px;
+    font-family: 'Noto Sans Mende Kikakui', sans-serif;
+    letter-spacing: 5px;
+    font-weight: lighter;
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto:wght@700&display=swap');
+
+*{
+    margin: 0; padding: 0;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    display: grid;
+    text-align: center;
+    /* background: linear-gradient(135deg, #C8FFD4, #FDFDBD); */
+}
+
+.main{
+    background-image: url(../img/back.jpg);
+    /* background: #b2afff9e; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    width: 40vw;
+    height: 49vw;
+    /* border: 2px solid #716fb2; */
+    display: grid;
+    margin: auto;
+    /* height: 500px;
+    width: 50%; */
+}
+
+header{
+    display: flex;
+    align-items: center;
+    display: grid;
+    text-align: center;
+}
+
+h2 {
+    margin: auto;
+    font-size: 50px;
+    color: #00000076;
+}
+
+.map1{
+    margin: 0 auto;
+}
+
+.row1{
+    display: flex;
+}
+
+.box1{
+    width: 100px;
+    height: 100px;
+    border: 3px solid #24325d;
+    display: flex;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    font-size: 60px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.one {
+    background-image: url("../img/tictactoe/one.jpg");
+    background-size: contain;
+}
+
+.two {
+    background-image: url("../img/tictactoe/two.jpg");
+    background-size: contain;
+}
+
+.modal2 {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.modal-content2 span {
+    color: white;
+    font-size: 2em;
+    margin: 10% auto auto auto;
+}
