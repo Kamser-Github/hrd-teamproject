@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 10%;
+}
+
+.form-container {
+	width: 70vw;
+	margin: 10px auto auto auto; /* 상 우 하 좌 */
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+.table-container {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	margin: 10px auto auto auto;
+}
+
+table {
+	border-collapse: collapse;
+	border: solid 1px lightblue;
+}
+
+th, td, button {
+	padding: 5px;
+}
+
+input, textarea {
+	padding: 5px;
+	margin-top: 10px;
+	border: solid 1px lightblue;
+	outline: none;
+}
+
+input[type=submit], input[type=button] {
+	cursor: pointer;
+}
+
+textarea {
+	resize: none;
+}

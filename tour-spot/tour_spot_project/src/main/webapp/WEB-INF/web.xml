@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	<display-name>tour_spot_project</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- servlet mapping -->
+	<servlet>
+		<servlet-name>service</servlet-name>
+		<servlet-class>controllers.ServiceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>service</servlet-name>
+		<url-pattern>/service</url-pattern>
+	</servlet-mapping>
+	<!-- jsp mapping -->
+	<!-- index mapping -->
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	
+	<!-- home mapping -->
+	<servlet>
+		<servlet-name>home</servlet-name>
+		<jsp-file>/views/home/home.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+
+	<!-- userPage -->
+	<servlet>
+		<servlet-name>join</servlet-name>
+		<jsp-file>/views/user/join.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>join</servlet-name>
+		<url-pattern>/join</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>userPageNew</servlet-name>
+		<jsp-file>/views/user/userPageNew.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userPageNew</servlet-name>
+		<url-pattern>/userPageNew</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>userConfirm</servlet-name>
+		<jsp-file>/views/user/userConfirm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userConfirm</servlet-name>
+		<url-pattern>/userConfirm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>myBoard</servlet-name>
+		<jsp-file>/views/user/myBoard.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myBoard</servlet-name>
+		<url-pattern>/myBoard</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>myDeleteUser</servlet-name>
+		<jsp-file>/views/user/myDeleteUser.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myDeleteUser</servlet-name>
+		<url-pattern>/myDeleteUser</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>myComment</servlet-name>
+		<jsp-file>/views/user/myComment.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myComment</servlet-name>
+		<url-pattern>/myComment</url-pattern>
+	</servlet-mapping>
+	
+
+	<!-- board mapping -->
+	<servlet>
+		<servlet-name>board</servlet-name>
+		<jsp-file>/views/board/board.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>board</servlet-name>
+		<url-pattern>/board</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>boardView</servlet-name>
+		<jsp-file>/views/board/boardView.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>boardView</servlet-name>
+		<url-pattern>/boardView</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>boardWriteForm</servlet-name>
+		<jsp-file>/views/board/boardWriteForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>boardWriteForm</servlet-name>
+		<url-pattern>/boardWriteForm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>boardUpdateForm</servlet-name>
+		<jsp-file>/views/board/boardUpdateForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>boardUpdateForm</servlet-name>
+		<url-pattern>/boardUpdateForm</url-pattern>
+	</servlet-mapping>
+	
+	<!-- notice -->
+	<servlet>
+		<servlet-name>notice</servlet-name>
+		<jsp-file>/views/notice/notice.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>notice</servlet-name>
+		<url-pattern>/notice</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>noticeView</servlet-name>
+		<jsp-file>/views/notice/noticeView.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>noticeView</servlet-name>
+		<url-pattern>/noticeView</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>noticeWriteForm</servlet-name>
+		<jsp-file>/views/notice/noticeWriteForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>noticeWriteForm</servlet-name>
+		<url-pattern>/noticeWriteForm</url-pattern>
+	</servlet-mapping>	
+</web-app>

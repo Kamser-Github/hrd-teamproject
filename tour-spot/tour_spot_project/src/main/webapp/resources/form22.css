@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+.title, .con textarea, .id, .content {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.upcontent {
+	width : 300px;
+	text-align : left;
+	padding-left : 10px;
+}
+
+.title{
+	border: 0; 
+	height: 50px;
+	width:100%;
+	font-size: 25px;
+	background-color:#f3f3f3;
+	margin-top:50px;
+	margin-bottom:10px;
+	font-weight:500;
+}
+
+.user{
+	font-weight:500;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 5%;
+}
+
+section{
+	padding-bottom: 10px;
+}
+
+.form-container {
+	width: 50vw;
+	margin: 10px auto auto auto; /* 상 우 하 좌 */
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+.table-container {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	margin: 10px auto auto auto;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+.main {
+	width:100%;
+	display: flex;
+	border:0;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.main table tr td{
+	width:25%;
+}
+
+.con, .map_image{
+	width:100%;
+	height:300px;
+	display: flex;
+	border:0;
+}
+.nav{
+	margin-top: 15px;
+	 width:100%;
+	 height:50px;
+}
+
+.nav ul li{
+	list-style:none;
+	text-align: center;
+	height: 20px;
+	width: 20%;
+	float: left;
+	padding: 10px 0 0 0;
+}
+
+.nav ul li a{
+	height: 20px;
+	font-size: 20px;
+	text-decoration-line : none;
+}
+
+.map_image{
+	margin-top: 15px;
+}
+
+#image img{
+	width:100%;
+    height:100%;
+    object-fit:cover;    /*잘라서 꽉채우게*/
+    position: static;
+}
+
+.board_menu{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.board_menu input{
+	height: 30px;
+	width: 55px;
+	float: right;
+	margin: 5px 5px 5px 5px;
+}
+.cnt table{
+	width: 100%;
+}
+
+th, td, button {
+	padding: 5px;
+}
+
+section input {
+	outline: none;
+}
+textarea{
+	padding: 5px;
+	margin-top: 15px;
+	border: solid 1px lightblue;
+	outline: none;
+}
+
+.cmt_button{
+	margin-top: 10px;
+}
+.cmt_button button{
+	float: right;
+}
+
+.cmt table{
+	width:100%;
+}
+
+.cmt_container textarea{
+	width:98%;
+	margin-top: 15px;
+	height: 59px;
+	border: solid 1px lightblue;
+	border-radius: 5px;
+	resize: none;
+}
+.cmt_container textarea:focus {
+        outline: none;
+    }
+
+.cmt table{
+	border: none;
+}
+
+.cmt table tr td{
+	border: none;
+}
+
+.id{
+	width: 50%;
+	font-size: 18px;
+}
+
+.modDate{
+	text-align:right;
+	width: 50%;
+	color: rgb(179, 177, 177);
+	font-size: 12px;
+}
+.content{
+	width:80%;
+}
+
+td.content{
+	font-size: 11px;
+}
+.content_button{
+	width:5%;
+}
+
+.content_button button{
+	float:right;
+	font-size: 12px;
+	width: 40px;
+}
+input[type=submit], input[type=button] {
+	cursor: pointer;
+}
+
+.content textarea {
+	width: 100%;
+	padding: 15px;
+}
+.con{
+	width: 100%;
+}
+.con textarea{
+	width: 100%;
+	height:270px;
+	resize: none;
+	background-color:transparent;
+	overflow: auto; 
+	font-size: 15px; 
+	border: 0;
+}
+
+.date, .view{
+	font-size:12px;
+}
+
+.list-button, button {
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  margin: 0;
+
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+
+  display: inline-block;
+  width: auto;
+
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+
+.footer{
+	position: static;
+}
+
+h4 {
+	text-align : left; 
+}
